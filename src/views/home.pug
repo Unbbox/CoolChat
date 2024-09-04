@@ -1,0 +1,19 @@
+doctype html
+html(lang="ko")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title CoolChat
+        link(rel="stylesheet", href="https://unpkg.com/mvp.css")
+    body 
+        header 
+            h1 CoolChat
+        main 
+            form#nick
+                input(type="text" class="nickname" placeholder="닉네임을 입력하세요", required)
+                button 저장
+            ul 
+            form#message
+                input(type="text" class="msg" placeholder="메세지 입력", required)
+                button 메세지 전송
+        script(src="/public/js/app.js") 
