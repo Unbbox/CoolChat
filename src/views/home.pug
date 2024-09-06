@@ -9,11 +9,19 @@ html(lang="ko")
         header 
             h1 CoolChat
         main 
-            form#nick
-                input(type="text" class="nickname" placeholder="닉네임을 입력하세요", required)
-                button 저장
-            ul 
-            form#message
-                input(type="text" class="msg" placeholder="메세지 입력", required)
-                button 메세지 전송
+            div#welcome
+                form#roomForm
+                    input#name(type="text", placeholder="닉네임 입력", required)
+                    input#roomNum(type="text", placeholder="방 이름", required)
+                    button 참가
+                h4 현재 생성된 방 [<span></span>] 👇      
+                ul
+            div#room 
+                h3
+                ul
+                form#msg
+                    input(type="text", placeholder="메세지 입력", required)
+                    button 전송
+        //- socket.io 추가
+        script(src="/socket.io/socket.io.js") 
         script(src="/public/js/app.js") 
